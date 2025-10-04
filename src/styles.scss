@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+.card-style {
+  width: 25rem;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Basis-Body Styling */
+body {
+  min-height: 100vh; /* ganze Höhe des Viewports */
+  margin: 0;
+  padding: 1rem;
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+
+  background: url("/assets/images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+a {
+  &:hover {
+    text-decoration: underline;
+  }
+}

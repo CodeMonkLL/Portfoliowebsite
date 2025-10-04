@@ -1,0 +1,86 @@
+.intro-container {
+  display: flex; /* nebeneinander */
+  align-items: center; /* vertikal zentrieren */
+  justify-content: space-between; /* Schrift links, Avatar rechts */
+  gap: 2rem; /* Abstand zwischen Schrift und Avatar */
+}
+
+.welcome-text {
+  display: inline-block;
+  font-size: clamp(20px, 8vw, 100px);
+  font-weight: 300;
+
+  opacity: 0;
+  transform: translateX(-100%); /* Start links außerhalb des Bildschirms */
+  animation: slideIn 2s forwards; /* Animation 2 Sekunden */
+
+  overflow: visible;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.avatar {
+  animation: slideIn 2s forwards;
+  transform: translateX(-100%);
+  border: solid 1px;
+}
+
+.highlight {
+  color: #4f4caf; /* z. B. grün */
+  text-decoration: underline;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: row; // von oben nach unten
+  gap: 1rem;
+
+  a {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideInUp 0.5s forwards;
+
+    &:nth-child(1) {
+      animation-delay: 2.5s; // nach Welcome-Text + Avatar
+    }
+    &:nth-child(2) {
+      animation-delay: 3s;
+    }
+    &:nth-child(3) {
+      animation-delay: 3.5s;
+    }
+
+    button {
+      background-color: transparent !important;
+      border: none !important;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
