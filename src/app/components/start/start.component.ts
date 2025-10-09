@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FieldsetModule } from 'primeng/fieldset';
 import { CardModule } from 'primeng/card';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 import { AvatarModule } from 'primeng/avatar';
 
 @Component({

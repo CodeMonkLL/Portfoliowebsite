@@ -1,0 +1,27 @@
+.scroll-container {
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  min-height: 80vh; // für kleine Bildschirme
+  max-height: 100vh;
+  height: auto; // passt sich dem Inhalt an
+  scroll-snap-align: start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  @media (min-width: 768px) {
+    min-height: 90vh;
+  }
+
+  @media (min-width: 1200px) {
+    min-height: 100vh;
+    padding: 4rem;
+  }
+}
