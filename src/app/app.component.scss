@@ -5,9 +5,7 @@
 }
 
 section {
-  min-height: 80vh; // für kleine Bildschirme
-  max-height: 100vh;
-  height: auto; // passt sich dem Inhalt an
+  height: 100vh; // passt sich dem Inhalt an
   scroll-snap-align: start;
 
   display: flex;
